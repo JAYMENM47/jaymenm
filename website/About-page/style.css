@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: rgba(242, 243, 244, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(174, 194, 183, 0.692),
+    rgba(246, 246, 246, 0.986)
+  );
+}
+
+/* ? Navigation Section */
+.nav-bar {
+  top: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  height: 5rem;
+  width: 100%;
+  border-bottom: 2px solid rgba(229, 231, 233, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(174, 194, 183, 0.692),
+    rgba(246, 246, 246, 0.986)
+  );
+  z-index: 999;
+}
+
+.list {
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  transition-duration: 0.5s;
+}
+
+.list a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Philosopher", sans-serif;
+  color: rgb(24, 34, 23);
+}
+
+.list:hover {
+  transform: translateY(-0.5rem);
+}
+
+.nav-logo {
+  width: 100px;
+  height: auto;
+}
+
+.logo-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 55%;
+}
+
+/* ? side bar */
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(199, 151, 18, 0.678);
+  overflow: visible;
+  transition: 0.5s;
+  padding-top: 10px;
+  border-left: 2px solid rgba(229, 231, 233, 0.5);
+ background: linear-gradient(
+    to right,
+    rgba(130, 224, 171, 0.918),
+    rgba(242, 243, 244, 0.705)
+  ); 
+}
+
+.hidden {
+  display: none;
+}
+
+.side-bar ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.side-bar li {
+  padding: 2rem;
+}
+
+.open {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgb(4, 4, 134);
+  transition-duration: 0.5s;
+}
+
+.close {
+  top: 0;
+  width: 100%;
+  text-align: end;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: rgb(4, 4, 134);
+  transition-duration: 0.5s;
+}
+
+/* ? Who Section */
+.who-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(174, 194, 183, 0.692),
+    rgba(50, 56, 52, 0.986)
+  );
+}
+
+.who-ttl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 585px;
+  width: auto;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Uchen';
+  background: linear-gradient(
+    to right,
+    rgba(5, 8, 6, 0.871),
+    rgba(75, 78, 81, 0.5)
+  );
+  color: rgb(121, 137, 137);
+  text-shadow: -5px 6px 6px rgba(93, 109, 126, 0.6);
+}
+
+
+.who-txt {
+  /* text-align: center; */
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Arimo';
+  line-height: 1.3;
+  font-size: 18px;
+}
+
+.who-txt div {
+  max-width: 800px;
+  text-wrap: wrap;
+  color: #151416;
+}
+
+/* ? mission & vision section */
+
+.mv-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  gap: 2rem;
+  justify-content: space-around;
+  margin: 5rem 1rem;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background-color: rgba(101, 133, 133, 0.795);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  color: #a5a0a8;
+}
+
+h2 {
+  color: rgba(9, 17, 26, 0.753);
+  font-family: 'Quando';
+}
+
+.card p{ margin-bottom: 20px;
+  margin-top: 1rem;
+  font-family: 'Arimo';
+  line-height: 1.3;
+  font-size: 18px;}
+/* ? team secttion */
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tm-ttl {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Uchen';
+  font-weight: 900;
+  color: rgb(10, 13, 15);
+  text-shadow: -5px 6px 6px rgba(93, 109, 126, 0.6);
+}
+
+.tm-img-cont {
+  width: auto;
+  height: 40%;
+  padding: 1rem;
+  background-color: rgba(158, 166, 175, 0.925);
+  box-shadow: rgba(99, 66, 66, 0.863) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.tm-img {
+  object-fit: cover;
+  width: 100%;
+  height: 40%;
+  border-radius: 30%;
+}
+
+.tm-txt {
+  /* text-align: center; */
+  padding: 0 5rem;
+  margin: 3rem 0 2rem;
+  color: #3f3844;
+  font-family: 'Arimo';
+  font-size: 18px;
+  line-height: 1.3;
+}
+.vision{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  color:rgb(10, 8, 8);
+}
+.mission{
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#141414;
+}
+.commitment{
+
+  margin: 3rem 0 1rem;
+  color: #020201;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+}
+/* ? Footer Section */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to right,
+    rgba(174, 194, 183, 0.692),
+    rgba(28, 31, 29, 0.986)
+  );
+}
+
+.sect-one {
+  display: flex;
+  justify-content: center;
+}
+
+.img-contain {
+  width: 150px;
+  height: auto;
+}
+
+.img-ftr {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 55%;
+}
+
+/* ? Sect two */
+.sect-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ftr-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ftr,
+.a {
+  list-style: none;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-family: "Philosopher", sans-serif;
+  color: rgb(4, 4, 134);
+  transition-duration: 0.5s;
+}
+
+.ftr:hover {
+  transform: translateY(-0.5rem);
+}
+
+.sect-tre {
+  text-align: center;
+}
+
+.sc-med {
+  display: flex;
+  flex-direction: column;
+  align-content: baseline;
+  justify-content: center;
+}
+
+.sc-contain {
+  display: flex;
+  flex-direction: row;
+}
+
+.phone,
+.mail,
+.facebook {
+  width: auto;
+  height: auto;
+  margin-left: 0rem;
+  font-family: "Philosopher", sans-serif;
+}
+
+.fc-link {
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.fc-link:hover {
+  color: lightskyblue;
+  text-decoration: underline;
+}
+
+.fa-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-bg div {
+  margin-bottom: 0.8rem;
+  transition-duration: 0.5s;
+}
+
+.fa-bg div a {
+  font-size: 1rem;
+  color: blue;
+  text-decoration: none;
+}
+
+.fa-bg div:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* ? Media Queries */
+
+@media all and (min-width: 300px) {
+  .open {
+    display: flex;
+  }
+
+  .navigation ul li {
+    display: none;
+  }
+
+  .side-bar {
+    width: 100%;
+  }
+
+  .tm-img {
+    width: 250px;
+  }
+
+  .mv-container {
+    flex-direction: column;
+  }
+
+  .who-txt div {
+    text-align: center;
+  }
+  .tm-txt {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .sect-two {
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .phone,
+  .mail,
+  .facebook {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .sc-contain {
+    flex-direction: column;
+  }
+
+  .ftr-nav {
+    margin: 1rem 0 0 0;
+  }
+
+  .fa-bg {
+    margin-top: 0.5rem;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .open {
+    display: none;
+  }
+
+  .navigation ul li {
+    display: flex;
+  }
+
+  .sect-two {
+    flex-direction: row;
+  }
+
+  .tm-img {
+    width: 450px;
+  }
+}
+
+@media all and (min-width: 760px) {
+  .sc-contain {
+    flex-direction: row;
+  }
+  .phone,
+  .mail,
+  .facebook {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .mv-container {
+    flex-direction: row;
+  }
+
+  .tm-img {
+    width: 550px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .phone,
+  .mail,
+  .facebook {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .tm-img {
+    width: 650px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .phone,
+  .mail,
+  .facebook {
+    margin-left: 8rem;
+    margin-top: 0.5rem;
+  }
+  .tm-img {
+    width: 750px;
+  }
+}
